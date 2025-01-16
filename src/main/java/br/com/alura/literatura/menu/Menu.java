@@ -1,7 +1,6 @@
 package br.com.alura.literatura.menu;
 
 import br.com.alura.literatura.models.Autor;
-import br.com.alura.literatura.models.DataAutor;
 import br.com.alura.literatura.models.DataGutendex;
 import br.com.alura.literatura.models.Livro;
 import br.com.alura.literatura.repositorio.AutorRepository;
@@ -10,8 +9,6 @@ import br.com.alura.literatura.service.BuscaLivro;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
-
 
 import java.util.List;
 import java.util.Optional;
@@ -88,16 +85,7 @@ public class Menu {
         return data;
 
     }
-// INCERTO
-//    private DataAutor getDataAutor() {
-//        System.out.println("Digite o nome do livro: ");
-//        String livro = scan.nextLine();
-//        var json = buscalivroApi.obterLivro(MAIN_URL+livro.replace(" ","+"));
-//        DataAutor dataAutor = new Gson().fromJson(json, DataAutor.class);
-//
-//        return dataAutor;
-//
-//    }
+
 
     private void resultadoApi() {
         DataGutendex data = getDataApi();
